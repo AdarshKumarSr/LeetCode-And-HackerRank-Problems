@@ -13,10 +13,8 @@ Each folder is further divided into subfolders or files based on problem categor
 ## Languages Used
 
 The solutions are implemented in the following programming languages:
-- Python
 - Java
 - C++
-- JavaScript
 - (Add more as applicable)
 
 ## How to Use
