@@ -1,14 +1,13 @@
-// Last updated: 6/17/2025, 12:06:57 PM
+// Last updated: 6/17/2025, 12:33:08 PM
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        sort(s.begin(), s.end());
-        sort(t.begin(), t.end());
+       if(s.length() != t.length()) return false;
 
-        if(s==t){
-            return true;
-        }
-        else return false;
+       map<char, int> freq1, freq2;
 
+       for(char c : s) freq1[c]++;
+       for(char x : t) freq2[x]++;
+       return freq1 == freq2;
     }
 };
