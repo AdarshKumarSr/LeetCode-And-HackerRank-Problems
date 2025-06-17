@@ -1,13 +1,12 @@
-// Last updated: 6/17/2025, 10:36:54 AM
+// Last updated: 6/17/2025, 10:50:25 AM
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        for(int i=1; i<nums.size(); ++i){
-            if(nums[i] == nums[i -1]){
-                return true;
-            }
+        unordered_set<int> sex; 
+        for(int x : nums) {
+            if(sex.count(x)) return true;
+            sex.insert(x);
         }
-            return false;
+        return false;
     }
 };
