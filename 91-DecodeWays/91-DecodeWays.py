@@ -1,20 +1,20 @@
-# Last updated: 6/17/2025, 8:58:33 AM
-class Solution:
-    def numDecodings(self, s: str) -> int:
-        if s[0] == '0':
-            return 0
-        
-        n = len(s)
-        dp = [0] * (n + 1)
-        dp[0], dp[1] = 1, 1
-
-        for i in range(2, n + 1):
-            one = int(s[i - 1])
-            two = int(s[i - 2:i])
-
-            if 1 <= one <= 9:
-                dp[i] += dp[i - 1]
-            if 10 <= two <= 26:
-                dp[i] += dp[i - 2]
-
-        return dp[n]
+# Last updated: 1/9/2026, 12:24:18 AM
+1class Solution:
+2    def numDecodings(self, s: str) -> int:
+3        if s[0] == '0':
+4            return 0
+5        
+6        n = len(s)
+7        dp = [0] * (n + 1)
+8        dp[0], dp[1] = 1, 1
+9
+10        for i in range(2, n + 1):
+11            one = int(s[i - 1])
+12            two = int(s[i - 2:i])
+13
+14            if 1 <= one <= 9:
+15                dp[i] += dp[i - 1]
+16            if 10 <= two <= 26:
+17                dp[i] += dp[i - 2]
+18
+19        return dp[n]
